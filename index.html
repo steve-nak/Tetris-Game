@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-wrapper">
+            <div class="sidebar">
+                <div class="info-box">
+                    <h2>TETRIS</h2>
+                    <div class="stats">
+                        <div class="stat">
+                            <label>Score:</label>
+                            <span id="score">0</span>
+                        </div>
+                        <div class="stat">
+                            <label>Lines:</label>
+                            <span id="lines">0</span>
+                        </div>
+                        <div class="stat">
+                            <label>Level:</label>
+                            <span id="level">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-box">
+                    <h3>Next</h3>
+                    <canvas id="nextCanvas" width="100" height="100"></canvas>
+                </div>
+                <div class="controls">
+                    <button id="startBtn">Start Game</button>
+                    <button id="pauseBtn" disabled>Pause</button>
+                </div>
+                <div class="instructions">
+                    <h3>Controls</h3>
+                    <p><strong>← →</strong> Move</p>
+                    <p><strong>↓</strong> Soft Drop</p>
+                    <p><strong>Space</strong> Hard Drop</p>
+                    <p><strong>Z/X</strong> Rotate</p>
+                </div>
+            </div>
+            <div class="game-board-container">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+            </div>
+        </div>
+        <div id="gameOverScreen" class="game-over">
+            <div class="game-over-content">
+                <h1>Game Over</h1>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
