@@ -123,6 +123,10 @@ class Tetris {
                     this.updateScore();
                 }
                 break;
+            case 'ArrowUp':
+                e.preventDefault();
+                this.rotatePiece(1);
+                break;
             case ' ':
                 e.preventDefault();
                 this.hardDrop();
